@@ -2,7 +2,7 @@ provider "aws" {
   region = "eu-central-1"
 }
 
-resource "aws_instance" "example" {
+resource "aws_instance" "my_project_instance" {
   ami           = "ami-03e08697c325f02ab"
   instance_type = "t2.micro"
 
@@ -16,9 +16,9 @@ resource "aws_instance" "example" {
   }
 }
 
-# resource "aws_eip" "example" {
+# resource "aws_eip" "my_project_instance" {
 #   vpc = true
-#   instance = aws_instance.example.id
+#   instance = aws_instance.my_project_instance.id
 # }
 
 resource "aws_security_group" "allow_access" {
