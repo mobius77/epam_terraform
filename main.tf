@@ -8,7 +8,7 @@ resource "aws_instance" "example" {
 
   key_name = "mytask"
 
-  vpc_security_group_ids = [aws_security_group.ssh.id]
+  vpc_security_group_ids = [aws_security_group.allow_access.id]
 
   # create and attach an EBS volume
   root_block_device {
@@ -21,9 +21,9 @@ resource "aws_instance" "example" {
 #   instance = aws_instance.example.id
 # }
 
-resource "aws_security_group" "ssh" {
-  name        = "allow_ssh"
-  description = "Allow SSH access from anywhere"
+resource "aws_security_group" "allow_access" {
+  name        = "allow_access"
+  description = "Allow access to ports 22, 18000-18003"
 
   ingress {
     from_port   = 22
