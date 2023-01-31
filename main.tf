@@ -9,6 +9,10 @@ resource "aws_instance" "my_project_instance" {
   key_name = "mytask"
   vpc_security_group_ids = [aws_security_group.allow_access.id]
 
+  tags = {
+    "Name" = "my_project_ec2"
+  }
+
   # create and attach an EBS volume
   root_block_device {
     volume_size = "10"
