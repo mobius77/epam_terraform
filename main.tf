@@ -3,11 +3,10 @@ provider "aws" {
 }
 
 resource "aws_instance" "my_project_instance" {
-  ami           = "ami-03e08697c325f02ab"
+#  ami           = "ami-03e08697c325f02ab"
+  ami           = "ami-0b4c74d41ee4bed78"
   instance_type = "t2.micro"
-
   key_name = "mytask"
-
   vpc_security_group_ids = [aws_security_group.allow_access.id]
 
   # create and attach an EBS volume
