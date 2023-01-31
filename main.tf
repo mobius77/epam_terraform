@@ -42,3 +42,7 @@ resource "aws_security_group" "allow_access" {
     cidr_blocks = ["0.0.0.0/0"]
   }  
 }
+
+output "instance_ip" {
+  value = aws_instance.my_project_instance.public_ip
+}
