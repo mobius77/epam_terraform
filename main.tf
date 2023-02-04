@@ -14,7 +14,7 @@ resource "aws_instance" "my_project_instance" {
 
   # create and attach an EBS volume
   root_block_device {
-    volume_size = "8"
+    volume_size = "10"
   }
 }
 
@@ -31,7 +31,7 @@ resource "aws_instance" "my_project_instance_prod" {
 
   # create and attach an EBS volume
   root_block_device {
-    volume_size = "8"
+    volume_size = "10"
   }
 }
 
