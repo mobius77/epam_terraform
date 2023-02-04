@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "eu-central-1"
+}
+
 resource "aws_route53_record" "subdomain-for-test" {
   zone_id = "Z01002213NIE3APYTM5XX"
   name    = "test.mobiusz.tk"
