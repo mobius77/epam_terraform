@@ -4,7 +4,7 @@ resource "aws_route53_record" "subdomain-for-test" {
   type    = "A"
   alias {
     name                   = aws_instance.my_project_instance.public_dns
-#    zone_id               = aws_route53_zone.subdomain-for-test.zone_id
+    zone_id               = aws_route53_record.subdomain-for-test.zone_id
     evaluate_target_health = true
   }
 }
@@ -15,7 +15,7 @@ resource "aws_route53_record" "subdomain-for-prod" {
   type    = "A"
   alias {
     name                   = aws_instance.my_project_instance_prod.public_dns
-#    zone_id               = aws_route53_zone.subdomain-for-prod.zone_id
+    zone_id               = aws_route53_record.subdomain-for-prod.zone_id
     evaluate_target_health = true
   }
 }
