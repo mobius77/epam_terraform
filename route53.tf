@@ -9,7 +9,7 @@ resource "aws_route53_record" "subdomain-for-test" {
   }
 }
 
-resource "aws_route53_record" "subdomain-for-test" {
+resource "aws_route53_record" "subdomain-for-prod" {
   zone_id = "Z01002213NIE3APYTM5XX"
   name    = "prod.mobiusz.tk"
   type    = "A"
